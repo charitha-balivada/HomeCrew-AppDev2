@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activity Report</title>
+</head>
+<body>
+    <h2>Activity Report - {{ month }}/{{ year }}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>Service</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for request in service_details %}
+            <tr>
+                <td>{{ request.customer_name }}</td>
+                <td>{{ request.service_name }}</td>
+                <td>{{ request.date_of_request }}</td>
+                <td>{{ request.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
